@@ -12,3 +12,10 @@ a similar, if not the same, color scheme as the other extension, but I needed to
 If you have any questions, comments, or concerns, please let me know.
 
 **Enjoy!**
+
+
+To install, from the theme's root, run
+``` bash
+vsce package --out custom-cpp-highlighting-private.vsix;
+code --install-extension custom-cpp-highlighting-private.vsix --force;
+```
