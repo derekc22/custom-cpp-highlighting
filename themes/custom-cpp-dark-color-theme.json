@@ -1,29 +1,49 @@
 {
-	"name": "custom-cpp-dark",
+	"name": "custom-cpp-dark-private",
 	"type": "dark",
 	"colors": {
-		"editor.background": "#0b0b0c",
-		"editor.foreground": "#dfd2d2",
+		"editor.background": "#2B2B2B",
+		"editor.foreground": "#D4DBE3",
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb",
-		"activityBar.background": "#0b0b0c",
+		"activityBar.background": "#2B2B2B",
 		"activityBar.border": "#696969",
-		"debugToolBar.background": "#0b0b0c",
+		"debugToolBar.background": "#2B2B2B",
 		"debugToolBar.border": "#696969",
-		"sideBar.background": "#0b0b0c",
+		"sideBar.background": "#2B2B2B",
 		"sideBar.border": "#696969"
 	},
 	"tokenColors": [
 		{
 			"name": "Comments",
 			"scope": [
-				"comment",
+				"comment.line.double-slash.cpp"
+			],
+			"settings": {
+				"foreground": "#999999"
+			}
+		},
+		{
+			"name": "Block Comments",
+			"scope": [
 				"comment.block.cpp",
-				"comment.line.double-slash.cpp",
-				"punctuation.definition.comment"
+				"comment.block.documentation",
+				"comment.block.documentation.cpp",
+				"punctuation.definition.comment.begin.documentation.cpp",
+				"punctuation.definition.comment.end.documentation.cpp"
 			],
 			"settings": {
 				"foreground": "#4f992d"
+			}
+		},
+		{
+			"name": "Doxygen Tags",
+			"scope": [
+				"storage.type.class.doxygen.cpp"
+			],
+			"settings": {
+				"foreground": "#BAAF29",
+				"fontStyle": "italic"
 			}
 		},
 		{
@@ -33,17 +53,33 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "#dfd2d2"
+				"foreground": "#D4DBE3"
 			}
 		},
+		// {
+		// 	"name": "Member Access Punctuation",
+		// 	"scope": [
+		// 		"punctuation.separator.dot-access",
+		// 		"punctuation.separator.pointer-access"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#f17c7c"
+		// 	}
+		// },
 		{
-			"name": "Member Access Punctuation",
+			"name": "Member Variables",
 			"scope": [
-				"punctuation.separator.dot-access",
-				"punctuation.separator.pointer-access"
+				"variable.other.member.cpp",
+				"variable.other.property.cpp",
+				"variable.other.member.readwrite",
+				"variable.other.property.readwrite",
+				"entity.name.variable.member",
+				"entity.name.variable.member.cpp",
+				"entity.name.variable.property",
+				"entity.name.variable.property.cpp"
 			],
 			"settings": {
-				"foreground": "#f36262"
+				"foreground": "#f17c7c"
 			}
 		},
 		{
@@ -52,7 +88,7 @@
 				"variable.parameter.cpp"
 			],
 			"settings": {
-				"foreground": "#8a8585"
+				"foreground": "#999999"
 			}
 		},
 		{
@@ -62,7 +98,7 @@
 				"storage.type.built-in.primitive.cpp"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -70,14 +106,14 @@
 			"scope": [
 				"storage.type",
 				"entity.name.type",
-				"entity.name.type.struct",
 				"entity.name.type.class",
 				"entity.name.type.cpp",
 				"entity.name.type.template.cpp",
-				"support.type.posix-reserved"
+				"support.type.posix-reserved",
+				"entity.name.type.struct"
 			],
 			"settings": {
-				"foreground": "#67dbc4"
+				"foreground": "#D4DBE3"
 			}
 		},
 		{
@@ -91,7 +127,7 @@
 				"storage.type.template.argument.class"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -100,16 +136,25 @@
 				"variable.language.this"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
 			"name": "Namespace Identifiers",
 			"scope": [
 				"entity.name.namespace",
+				"entity.name.namespace.cpp",
+				"entity.name.namespace.alias",
+				"entity.name.namespace.scope-resolution",
 				"entity.name.namespace.scope-resolution.cpp",
+				"entity.name.namespace.qualifier",
 				"entity.name.scope-resolution.namespace.using.cpp",
-				"entity.name.scope-resolution.cpp"
+				"entity.name.scope-resolution.cpp",
+				"entity.name.type.namespace",
+				"entity.name.type.namespace.cpp",
+				"entity.other.namespace",
+				"entity.other.namespace.cpp",
+				"support.type.namespace"
 			],
 			"settings": {
 				"foreground": "#67dbc4"
@@ -123,7 +168,7 @@
 				"storage.type.namespace.definition"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -135,7 +180,7 @@
 				"keyword.control.return.cpp"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -144,7 +189,7 @@
 				"keyword.control.exception"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -156,7 +201,7 @@
 				"keyword.control.directive.define.cpp"
 			],
 			"settings": {
-				"foreground": "#8a8585"
+				"foreground": "#BAAF29"
 			}
 		},
 		{
@@ -179,7 +224,7 @@
 				"storage.type.modifier.access.control",
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -190,7 +235,7 @@
 				"entity.name.function.member.cpp"
 			],
 			"settings": {
-				"foreground": "#dfd2d2"
+				"foreground": "#f3974b",
 			}
 		},
 		{
@@ -204,7 +249,16 @@
 				"keyword.operator.logical.cpp"
 			],
 			"settings": {
-				"foreground": "#dfd2d2"
+				"foreground": "#D4DBE3"
+			}
+		},
+		{
+			"name": "Bitwise Shift Operators",
+			"scope": [
+				"keyword.operator.bitwise.shift.cpp"
+			],
+			"settings": {
+				"foreground": "#6EA09D"
 			}
 		},
 		{
@@ -213,7 +267,7 @@
 				"keyword.operator.cast"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -225,7 +279,16 @@
 				"keyword.operator.delete.array.bracket"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
+			}
+		},
+		{
+			"name": "Reference Operators",
+			"scope": [
+				"storage.modifier.reference.cpp"
+			],
+			"settings": {
+				"foreground": "#6EA09D"
 			}
 		},
 		{
@@ -236,7 +299,7 @@
 				"string.quoted.double.cpp"
 			],
 			"settings": {
-				"foreground": "#ee9876",
+				"foreground": "#82A06E",
 			}
 		},
 		{
@@ -266,7 +329,7 @@
 				"constant.language.cpp"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{
@@ -285,7 +348,7 @@
 				"storage.source.cmake"
 			],
 			"settings": {
-				"foreground": "#449be2"
+				"foreground": "#99C6EC"
 			}
 		},
 		{

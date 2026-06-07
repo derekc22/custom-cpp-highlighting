@@ -1,9 +1,9 @@
 {
-    "name": "custom-cpp-highlighting",
-    "displayName": "Custom C++ Highlighting",
+    "name": "custom-cpp-highlighting-private",
+    "displayName": "Custom C++ Highlighting Private",
     "description": "C++ syntax highlighting strongly influenced by Visual Studio's Dark theme syntax highlighting.",
     "version": "0.0.5",
-    "publisher": "tcarlswing",
+    "publisher": "derekchibuzor",
     "author": {
         "name": "Thomas",
         "email": "tcarlswing@outlook.com"
@@ -17,7 +17,7 @@
     "contributes": {
         "themes": [
             {
-                "label": "custom-cpp-dark",
+                "label": "custom-cpp-dark-private",
                 "uiTheme": "vs-dark",
                 "path": "./themes/custom-cpp-dark-color-theme.json"
             }
