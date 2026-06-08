@@ -8,6 +8,7 @@
 		"sideBarTitle.foreground": "#bbbbbb",
 		"activityBar.background": "#2B2B2B",
 		"activityBar.border": "#696969",
+		"statusBar.background": "#2B2B2B",
 		"debugToolBar.background": "#2B2B2B",
 		"debugToolBar.border": "#696969",
 		"sideBar.background": "#2B2B2B",
@@ -33,7 +34,8 @@
 				"punctuation.definition.comment.end.documentation.cpp"
 			],
 			"settings": {
-				"foreground": "#4f992d"
+				// "foreground": "#4f992d"
+				"foreground": "#82A06E",
 			}
 		},
 		{
@@ -299,7 +301,7 @@
 				"string.quoted.double.cpp"
 			],
 			"settings": {
-				"foreground": "#82A06E",
+				"foreground": "#3EBC79",
 			}
 		},
 		{
